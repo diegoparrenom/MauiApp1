@@ -31,29 +31,7 @@ public partial class UsersViewModel : BaseViewModel
 
         try
         {
-            var location = await geolocation.GetLastKnownLocationAsync();
-            if(location is null)
-            {
-                location = await geolocation.GetLocationAsync(
-                    new GeolocationRequest
-                    {
-                        DesiredAccuracy = GeolocationAccuracy.Medium,
-                        Timeout = TimeSpan.FromSeconds(30)
-                    });
-            }
-
-            if (location is null)
-                return;
-
-            var first = Users.OrderBy(m =>
-            location.CalculateDistance(m.Latitude, m.Longitude, DistanceUnits.Miles)
-            ).FirstOrDefault();
-
-            if (first == null) 
-                return;
-
-            await Shell.Current.DisplayAlert("Closest User",
-                $"{first.Name} in {first.Location}", "OK");
+            
 
         }
         catch (Exception ex)

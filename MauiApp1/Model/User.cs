@@ -4,11 +4,10 @@ namespace MauiApp1.Model;
 
 public class User
 {
-    public string Name { get; set; }
-    public string Location {  get; set; }
-    public string Details { get; set; }
-    public string Image {  get; set; }
-    public int Population { get; set; }
-    public double Latitude { get; set; }
-    public double Longitude { get; set; }
+    public int id { get; set; }
+    public string email {  get; set; }
+    public string first_name { get; set; }
+    public string last_name {  get; set; }
+    public string avatar { get; set; }
+
 }

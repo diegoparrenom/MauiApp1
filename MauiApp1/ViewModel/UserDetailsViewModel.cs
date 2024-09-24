@@ -17,12 +17,7 @@ public partial class UserDetailsViewModel : BaseViewModel
     {
         try
         {
-            await map.OpenAsync(User.Latitude, User.Longitude,
-                new MapLaunchOptions
-                {
-                    Name = User.Name,
-                    NavigationMode = NavigationMode.None
-                });
+           
         }
         catch (Exception ex)
         {

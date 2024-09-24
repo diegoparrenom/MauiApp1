@@ -4,7 +4,7 @@
              x:Class="MauiApp1.DetailsPage"
              xmlns:viewmodel="clr-namespace:MauiApp1.ViewModel"
              x:DataType="viewmodel:UserDetailsViewModel"
-             Title="{Binding User.Name}">
+             Title="{Binding User.last_name}">
     <ScrollView>
         <VerticalStackLayout>
             <Grid ColumnDefinitions="*,Auto,*"
@@ -26,7 +26,7 @@
                            WidthRequest="160"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"
-                           Source="{Binding User.Image}"/>
+                           Source="{Binding User.avatar}"/>
                 </Frame>
             </Grid>
 
@@ -38,11 +38,11 @@
                     Style="{StaticResource ButtonOutline}"/>
             
             <VerticalStackLayout Padding="10" Spacing="10">
-                <Label Text="{Binding User.Details}"
+                <Label Text="{Binding User.first_name}"
                        Style="{StaticResource MediumLabel}"/>
-                <Label Text="{Binding User.Location, StringFormat='Location:{0}'}"
+                <Label Text="{Binding User.last_name}"
                         Style="{StaticResource SmallLabel}"/>
-                <Label Text="{Binding User.Population,StringFormat='Population:{0}'}"/>
+                <Label Text="{Binding User.email,StringFormat='Email:{0}'}"/>
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

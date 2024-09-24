@@ -47,16 +47,16 @@
                                 <Grid Padding="0"
                           ColumnDefinitions="125,*">
                                     <Image Aspect="AspectFill"
-                               Source="{Binding Image}"
+                               Source="{Binding avatar}"
                                WidthRequest="125"
                                HeightRequest="125"
                                />
                                     <VerticalStackLayout Grid.Column="1"
                                                  Padding="10"
                                                  VerticalOptions="Center">
-                                        <Label Text="{Binding Name}"
+                                        <Label Text="{Binding first_name}"
                                    Style="{StaticResource LargeLabel}"/>
-                                        <Label Text="{Binding Location}"
+                                        <Label Text="{Binding last_name}"
                                    Style="{StaticResource MediumLabel}"/>
                                     </VerticalStackLayout>
                                 </Grid>
