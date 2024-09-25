@@ -26,9 +26,6 @@ public class UserService
 
         if(response.IsSuccessStatusCode)
         {
-            //userList = await response.Content.ReadFromJsonAsync<List<User>>();
-            //x = await response.Content.ReadAsStringAsync();
-            //userInfo = JsonSerializer.Deserialize<Info>(x);
             userInfo = await response.Content.ReadFromJsonAsync<Info>();
             userList = userInfo.data.OfType<User>().ToList(); ;
         }
