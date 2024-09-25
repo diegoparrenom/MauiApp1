@@ -31,11 +31,12 @@
             </Grid>
            
             <VerticalStackLayout Padding="10" Spacing="10">
-                <Label Text="{Binding User.first_name}"
-                       Style="{StaticResource MediumLabel}"/>
-                <Label Text="{Binding User.last_name}"
-                        Style="{StaticResource SmallLabel}"/>
-                <Label Text="{Binding User.email,StringFormat='Email:{0}'}"/>
+                <Label Text="{Binding User.FullName}"
+                       Style="{StaticResource LargeLabel}"/>
+                <Label Text="Correo electronico:"
+                        Style="{StaticResource MediumLabel}"/>
+                <Label Text="{Binding User.email,StringFormat='{0}'}"
+                       Style="{StaticResource LargeLabel}" />
             </VerticalStackLayout>
         </VerticalStackLayout>
     </ScrollView>

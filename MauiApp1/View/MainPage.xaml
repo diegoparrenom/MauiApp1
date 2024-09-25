@@ -38,33 +38,32 @@
                     <DataTemplate x:DataType ="model:User">
                         <Grid Padding="10"  >
                             <Frame HeightRequest="125"
-                       Padding="0" 
-                       Style="{StaticResource CardView}">
+                               Padding="0" 
+                               Style="{StaticResource CardView}">
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer CommandParameter="{Binding .}"
                                               Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:UsersViewModel}}, Path=GoToDetailsCommand}"/>
                                 </Frame.GestureRecognizers>
                                 <Grid Padding="0"
-                          ColumnDefinitions="125,*">
+                                    ColumnDefinitions="125,*">
                                     <Image Aspect="AspectFill"
-                               Source="{Binding avatar}"
-                               WidthRequest="125"
-                               HeightRequest="125"
-                               />
+                                       Source="{Binding avatar}"
+                                       WidthRequest="125"
+                                       HeightRequest="125"
+                                       />   
                                     <VerticalStackLayout Grid.Column="1"
                                                  Padding="10"
                                                  VerticalOptions="Center">
                                         <Label Text="{Binding first_name}"
-                                   Style="{StaticResource LargeLabel}"/>
+                                            Style="{StaticResource LargeLabel}"/>
                                         <Label Text="{Binding last_name}"
-                                   Style="{StaticResource MediumLabel}"/>
+                                            Style="{StaticResource LargeLabel}"/>
                                     </VerticalStackLayout>
                                 </Grid>
                             </Frame>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-
             </CollectionView>
         </RefreshView>
         
